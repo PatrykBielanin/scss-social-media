@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+@mixin flexDisplay {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin mainDesign {
+    background-color: white;
+    box-shadow: 0px 13px 20px rgba(0, 0, 0, 0.116);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 3vh;
+
+    h4{
+        font-size: 24px;
+        color: rgb(88, 88, 88);
+        padding: 5px;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    min-height: calc(100vh - 5%);
+    padding: 5% 10% 5% 10%;
+    background: rgba(245, 245, 245, 0.253);
+}
+
+
+.top{
+    @include flexDisplay();
+    padding-bottom: 5vh;
+    h1{
+        text-align: center;
+        position: absolute;
+        font-size: 38px;
+        background: -webkit-linear-gradient(180deg, #CC0FD6 0%, #16599E 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+    }
+    .icon{
+        color: black;
+    }
+    .search, span{
+        color: rgb(224, 224, 224);
+        font-size: 38px;
+        transition: color .2s;
+        background: -webkit-linear-gradient(180deg, #CC0FD6 0%, #16599E 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+    }
+
+    .search:hover{
+        cursor: pointer;
+        color:rgb(88, 88, 88);
+    }
+
+
+    img{
+        width: 45px;
+        border-radius: 100%;
+    }
+
+    .rightTop{
+        position: relative;
+        margin-left: auto;
+    }
+}
+
+.main{
+    @include flexDisplay();
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+.leftSideProfile{
+    min-width: 25%;
+    min-height: auto;
+    color: rgb(88, 88, 88);
+
+    button{
+        border: none;
+        background-color: transparent;
+
+        span{
+            background: -webkit-linear-gradient(180deg, #CC0FD6 0%, #16599E 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        span:hover{
+            cursor: pointer;
+        }
+    }
+
+    .name{
+        width: 100%;
+        margin-bottom: 40px;
+        margin-top: 40px;
+        h1{
+            font-size: 24px;
+        }
+
+        h4{
+            font-size: 18px;
+        }
+    }
+
+    .profileMenu{
+        width: 100%;
+        font-size: 24px;
+        line-height: 1.5em;
+    }
+
+    .profileInfo{
+        display: none;
+    }
+
+    img{
+        width: 250px;
+        border-radius: 50%;
+        box-shadow: 0px 13px 20px rgba(0, 0, 0, 0.116);
+    }
+
+    li{
+        list-style: none;
+        color: rgb(185, 185, 185);
+    }
+
+    .active{
+        color: rgb(88, 88, 88);
+    }
+}
+
+.mainSideProfile{
+    min-width: 50%;
+    max-width: 50%;
+
+    .photos{
+        @include mainDesign();
+        img{
+            border-radius: 2px;
+            padding: 5px;
+        }
+    }
+
+    .friends{
+        @include mainDesign();
+        @include flexDisplay();
+        justify-content: flex-start;
+        h4{
+            width: 100%;
+        }
+        img{
+            width: 50px;
+            border-radius: 50%;
+            padding: 5px;
+        }
+        p{
+            font-size: 14px;
+        }
+
+        .friend{
+            margin: auto;
+        }
+    }
+
+    .posts{
+        @include mainDesign();
+        h4{
+            font-size: 24px;
+            color: rgb(88, 88, 88);
+            padding: 5px 5px 5px 25px;
+        }
+
+        .post{
+            @include flexDisplay();
+            margin-top: 20px;
+            justify-content: flex-start;
+            border-bottom: 1px solid rgb(238, 238, 238);
+            .postImg{
+                width: 20%;
+                height: 100%;
+                margin: auto;
+
+                display: flex;
+                justify-content: center;
+                align-content: flex-start;
+                img{
+                    width: 50px;
+                    border-radius: 50%;
+                }
+            }
+
+            .postText{
+                font-size: 20px;
+                width: 80%;
+                span{
+                    font-size: 14px;
+                    font-weight: 300;
+                    color: rgb(185, 185, 185);
+                }
+                p{
+                    margin-top: 20px;
+                    font-size: 18px;
+                }
+            }
+
+            .postReactions{
+                width: 100%;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                font-size: 16px;
+                span{
+                    margin-left: 25px;
+                    font-size: 18px;
+                }
+
+                .like{
+                    transition: color .5s;
+
+                    &:hover{
+                        color: red;
+                        cursor: pointer;
+                    }
+                }
+
+                .comment{
+                    transition: color .5s;
+
+                    &:hover{
+                        color: blue;
+                        cursor: pointer;
+                    }
+                }
+
+                .share{
+                    transition: color .5s;
+
+                    &:hover{
+                        color: green;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .post:last-child{
+            border-bottom: none;
+        }
+    }
+}
+
+.rightSideProfile{
+    min-width: 25%;
+    color: rgb(88, 88, 88);
+    // background-image: url('/img/map.svg');
+    object-fit: cover;
+    h1{
+        font-size: 18px;
+    }
+    .biography{
+        padding: 20px;
+    }
+
+    .location{
+        padding: 20px;
+    }
+}

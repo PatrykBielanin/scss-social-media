@@ -1,0 +1,115 @@
+@mixin flexDisplay {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 1360px){
+    body{
+        padding: 5% 2% 5% 2%;
+    }
+    .main{
+        @include flexDisplay();
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .leftSideProfile{
+        @include flexDisplay();
+        text-align: center;
+        font-size: 24px;
+
+        .name{
+            h1{
+                font-size: 42px;
+            }
+        }
+
+        .biography, .location{
+            margin: 20px 0 20px 0;
+        }
+
+        .profileInfo{
+            display: block;
+        }
+
+        .profileMenu{
+            margin: 5vh 0 5vh 0;
+            ul{
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+
+                li{
+                    margin: auto;
+                }
+            }
+        }
+    }
+
+    .mainSideProfile{
+        min-width: 100%;
+        max-width: 100%;
+
+        .photos{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+
+            h4{
+                width: 100%;
+            }
+        }
+
+        .posts{
+            .post{
+                @include flexDisplay();
+                flex-direction: column;
+                flex-wrap: wrap;
+                text-align: center;
+
+                .postText{
+                    margin-top: 20px;
+                    width: 100%;
+
+                    h5{
+                        width: 80%;
+                        margin: auto;
+                    }
+                }
+            }
+        }
+    }
+
+    .rightSideProfile{
+        display: none;
+    }
+}
+
+@media (max-width: 500px){
+    .top{
+        .rightTop{
+            img{
+                display: none;
+            }
+        }
+    }
+
+    .leftSideProfile{
+        font-size: 15px;
+    }
+
+    .mainSideProfile{
+        .photos{
+            img{
+                width: 100%;
+            }
+        }
+    }
+}

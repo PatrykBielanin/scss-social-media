@@ -1,0 +1,382 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+  min-height: calc(100vh - 5%);
+  padding: 5% 10% 5% 10%;
+  background: rgba(245, 245, 245, 0.253);
+}
+
+.top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 5vh;
+}
+
+.top h1 {
+  text-align: center;
+  position: absolute;
+  font-size: 38px;
+  background: -webkit-linear-gradient(180deg, #CC0FD6 0%, #16599E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.top .icon {
+  color: black;
+}
+
+.top .search, .top span {
+  color: #e0e0e0;
+  font-size: 38px;
+  -webkit-transition: color .2s;
+  transition: color .2s;
+  background: -webkit-linear-gradient(180deg, #CC0FD6 0%, #16599E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.top .search:hover {
+  cursor: pointer;
+  color: #585858;
+}
+
+.top img {
+  width: 45px;
+  border-radius: 100%;
+}
+
+.top .rightTop {
+  position: relative;
+  margin-left: auto;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.leftSideProfile {
+  min-width: 25%;
+  min-height: auto;
+  color: #585858;
+}
+
+.leftSideProfile button {
+  border: none;
+  background-color: transparent;
+}
+
+.leftSideProfile button span {
+  background: -webkit-linear-gradient(180deg, #CC0FD6 0%, #16599E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.leftSideProfile button span:hover {
+  cursor: pointer;
+}
+
+.leftSideProfile .name {
+  width: 100%;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.leftSideProfile .name h1 {
+  font-size: 24px;
+}
+
+.leftSideProfile .name h4 {
+  font-size: 18px;
+}
+
+.leftSideProfile .profileMenu {
+  width: 100%;
+  font-size: 24px;
+  line-height: 1.5em;
+}
+
+.leftSideProfile .profileInfo {
+  display: none;
+}
+
+.leftSideProfile img {
+  width: 250px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 13px 20px rgba(0, 0, 0, 0.116);
+          box-shadow: 0px 13px 20px rgba(0, 0, 0, 0.116);
+}
+
+.leftSideProfile li {
+  list-style: none;
+  color: #b9b9b9;
+}
+
+.leftSideProfile .active {
+  color: #585858;
+}
+
+.mainSideProfile {
+  min-width: 50%;
+  max-width: 50%;
+}
+
+.mainSideProfile .photos {
+  background-color: white;
+  -webkit-box-shadow: 0px 13px 20px rgba(0, 0, 0, 0.116);
+          box-shadow: 0px 13px 20px rgba(0, 0, 0, 0.116);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 3vh;
+}
+
+.mainSideProfile .photos h4 {
+  font-size: 24px;
+  color: #585858;
+  padding: 5px;
+}
+
+.mainSideProfile .photos img {
+  border-radius: 2px;
+  padding: 5px;
+}
+
+.mainSideProfile .friends {
+  background-color: white;
+  -webkit-box-shadow: 0px 13px 20px rgba(0, 0, 0, 0.116);
+          box-shadow: 0px 13px 20px rgba(0, 0, 0, 0.116);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 3vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.mainSideProfile .friends h4 {
+  font-size: 24px;
+  color: #585858;
+  padding: 5px;
+}
+
+.mainSideProfile .friends h4 {
+  width: 100%;
+}
+
+.mainSideProfile .friends img {
+  width: 50px;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.mainSideProfile .friends p {
+  font-size: 14px;
+}
+
+.mainSideProfile .friends .friend {
+  margin: auto;
+}
+
+.mainSideProfile .posts {
+  background-color: white;
+  -webkit-box-shadow: 0px 13px 20px rgba(0, 0, 0, 0.116);
+          box-shadow: 0px 13px 20px rgba(0, 0, 0, 0.116);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 3vh;
+}
+
+.mainSideProfile .posts h4 {
+  font-size: 24px;
+  color: #585858;
+  padding: 5px;
+}
+
+.mainSideProfile .posts h4 {
+  font-size: 24px;
+  color: #585858;
+  padding: 5px 5px 5px 25px;
+}
+
+.mainSideProfile .posts .post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.mainSideProfile .posts .post .postImg {
+  width: 20%;
+  height: 100%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+
+.mainSideProfile .posts .post .postImg img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.mainSideProfile .posts .post .postText {
+  font-size: 20px;
+  width: 80%;
+}
+
+.mainSideProfile .posts .post .postText span {
+  font-size: 14px;
+  font-weight: 300;
+  color: #b9b9b9;
+}
+
+.mainSideProfile .posts .post .postText p {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.mainSideProfile .posts .post .postReactions {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.mainSideProfile .posts .post .postReactions span {
+  margin-left: 25px;
+  font-size: 18px;
+}
+
+.mainSideProfile .posts .post .postReactions .like {
+  -webkit-transition: color .5s;
+  transition: color .5s;
+}
+
+.mainSideProfile .posts .post .postReactions .like:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.mainSideProfile .posts .post .postReactions .comment {
+  -webkit-transition: color .5s;
+  transition: color .5s;
+}
+
+.mainSideProfile .posts .post .postReactions .comment:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+.mainSideProfile .posts .post .postReactions .share {
+  -webkit-transition: color .5s;
+  transition: color .5s;
+}
+
+.mainSideProfile .posts .post .postReactions .share:hover {
+  color: green;
+  cursor: pointer;
+}
+
+.mainSideProfile .posts .post:last-child {
+  border-bottom: none;
+}
+
+.rightSideProfile {
+  min-width: 25%;
+  color: #585858;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.rightSideProfile h1 {
+  font-size: 18px;
+}
+
+.rightSideProfile .biography {
+  padding: 20px;
+}
+
+.rightSideProfile .location {
+  padding: 20px;
+}
+/*# sourceMappingURL=style.css.map */
